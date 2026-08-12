@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f2f0e4;
+  --card: #141414;
+  --gold: #d4af37;
+  --gold-light: #f2e8c4;
+  --midnight: #1e3d59;
+  --muted: #888888;
+  --border-gold: #d4af37;
+  --glow-gold: 0 0 15px rgba(212, 175, 55, 0.2);
+  --glow-gold-strong: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-midnight: var(--midnight);
+  --color-muted: var(--muted);
+  --font-display: var(--font-marcellus);
+  --font-sans: var(--font-josefin);
+  --radius-none: 0px;
+  --radius-sm: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-josefin), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Diagonal crosshatch at low opacity */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 11px,
+      rgba(212, 175, 55, 0.9) 11px,
+      rgba(212, 175, 55, 0.9) 12px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 11px,
+      rgba(212, 175, 55, 0.9) 11px,
+      rgba(212, 175, 55, 0.9) 12px
+    );
+}
+
+/* Subtle film grain */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.site-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.font-display {
+  font-family: var(--font-marcellus), ui-serif, Georgia, serif;
+}
+
+.glow-gold {
+  box-shadow: var(--glow-gold);
+}
+
+.glow-gold-strong {
+  box-shadow: var(--glow-gold-strong);
+}
+
+.double-frame {
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  padding: 0.5rem;
+  background: var(--card);
+}
+
+.double-frame-inner {
+  border: 6px solid #0a0a0a;
+  outline: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.sunburst {
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      rgba(212, 175, 55, 0.16) 0%,
+      rgba(212, 175, 55, 0.06) 35%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 50% 45%,
+      transparent 0%,
+      transparent 18%,
+      rgba(212, 175, 55, 0.04) 19%,
+      transparent 20%,
+      transparent 28%,
+      rgba(212, 175, 55, 0.035) 29%,
+      transparent 30%,
+      transparent 38%,
+      rgba(212, 175, 55, 0.03) 39%,
+      transparent 40%
+    );
+}
+
+@keyframes deco-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes deco-sunburst-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes deco-track-in {
+  from {
+    opacity: 0;
+    letter-spacing: 0.45em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.2em;
+  }
+}
+
+.animate-deco-fade-up {
+  animation: deco-fade-up 500ms ease-out both;
+}
+
+.animate-deco-sunburst {
+  animation: deco-sunburst-in 700ms ease-out both;
+}
+
+.animate-deco-track {
+  animation: deco-track-in 600ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-deco-fade-up,
+  .animate-deco-sunburst,
+  .animate-deco-track {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
