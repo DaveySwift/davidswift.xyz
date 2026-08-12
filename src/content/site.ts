@@ -47,7 +47,7 @@ export const site = {
   },
   heroPortrait: {
     src: "/images/hero-portrait.png",
-    alt: "Portrait of David Swift",
+    alt: "David Swift — mugshot-style portrait",
   },
   ventures: [
     { roman: "I", name: "Swift-Tech Industries" },
