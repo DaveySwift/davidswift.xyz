@@ -42,7 +42,7 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-6 md:gap-6 md:px-8">
-        <BrandMark size={64} />
+        <BrandMark size={64} wordmarkClassName="hidden md:inline" />
         <nav
           aria-label="Primary"
           className="hidden items-center gap-8 lg:flex"

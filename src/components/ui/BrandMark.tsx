@@ -7,6 +7,7 @@ type BrandMarkProps = {
   className?: string;
   size?: number;
   showWordmark?: boolean;
+  wordmarkClassName?: string;
   href?: string;
 };
 
@@ -14,6 +15,7 @@ export function BrandMark({
   className,
   size = 48,
   showWordmark = true,
+  wordmarkClassName,
   href = "/",
 }: BrandMarkProps) {
   return (
@@ -45,7 +47,12 @@ export function BrandMark({
         />
       </span>
       {showWordmark ? (
-        <span className="font-display text-sm uppercase tracking-[0.28em] text-foreground md:text-base">
+        <span
+          className={cn(
+            "font-display text-sm uppercase tracking-[0.28em] text-foreground md:text-base",
+            wordmarkClassName,
+          )}
+        >
           {site.name}
         </span>
       ) : null}
