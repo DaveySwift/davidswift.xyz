@@ -22,22 +22,25 @@ export function Hero() {
         <div className="relative mb-10 animate-deco-fade-up">
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 blur-2xl md:h-56 md:w-56"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 blur-2xl md:h-64 md:w-64"
             style={{
               background:
                 "radial-gradient(circle, rgba(212,175,55,0.28) 0%, rgba(212,175,55,0.08) 45%, transparent 70%)",
             }}
           />
-          <Image
-            src={site.logo.src}
-            alt=""
-            width={176}
-            height={176}
-            className="relative z-10 h-36 w-36 object-contain md:h-44 md:w-44"
-            priority
-            unoptimized
-            aria-hidden="true"
-          />
+          <div className="relative z-10 mx-auto w-[9.5rem] border border-gold p-1.5 glow-gold md:w-[11.5rem]">
+            <div className="border border-gold/35 bg-card p-1">
+              <Image
+                src={site.heroPortrait.src}
+                alt={site.heroPortrait.alt}
+                width={800}
+                height={1024}
+                className="aspect-[4/5] w-full object-cover object-[center_18%] grayscale transition duration-500 ease-out hover:grayscale-0"
+                priority
+                unoptimized
+              />
+            </div>
+          </div>
         </div>
         <p className="mb-4 font-sans text-xs uppercase tracking-[0.4em] text-gold animate-deco-fade-up [animation-delay:80ms]">
           {site.title}

@@ -45,6 +45,10 @@ export const site = {
     src: "/images/logo-swift-gold.png",
     alt: "David Swift logo — gold Art Deco swift emblem",
   },
+  heroPortrait: {
+    src: "/images/hero-portrait.png",
+    alt: "Portrait of David Swift",
+  },
   ventures: [
     { roman: "I", name: "Swift-Tech Industries" },
     { roman: "II", name: "Swift-Agro Sphere" },
