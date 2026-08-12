@@ -23,6 +23,30 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/logo-swift-gold.png",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://davidswift.xyz",
+    siteName: "David Swift",
+    title: "David Swift | Capability Builder",
+    description:
+      "Building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "David Swift — Capability Builder",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "David Swift | Capability Builder",
+    description:
+      "Building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

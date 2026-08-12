@@ -22,6 +22,14 @@ pnpm dev
 - `pnpm lint` — ESLint (warnings as errors)
 - `pnpm test` — Jest + Testing Library
 
-## Domain
+# Production: [https://davidswift.xyz](https://davidswift.xyz)
 
-Production: [https://davidswift.xyz](https://davidswift.xyz)
+## Porkbun Static Hosting
+
+This project builds to a static `out/` folder for Porkbun.
+
+1. In Porkbun → Static Hosting → **GitHub Connect**
+2. Select repo `DaveySwift/davidswift.xyz`
+3. Set branch to **`deploy`** (not `main`)
+
+`main` holds the Next.js source. On every push to `main`, GitHub Actions builds the site and updates the `deploy` branch with flat static files (required by Porkbun).
