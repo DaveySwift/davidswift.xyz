@@ -2,6 +2,8 @@ export type Venture = {
   roman: string;
   name: string;
   note?: string;
+  href?: string;
+  embed?: boolean;
   /** Column span on large screens (default 1) */
   span?: 1 | 2;
 };
@@ -52,15 +54,23 @@ export const site = {
   ventures: [
     { roman: "I", name: "Swift-Tech Industries" },
     { roman: "II", name: "Swift-Agro Sphere" },
-    { roman: "III", name: "Plant Force Britain", note: "1/3 participant" },
+    {
+      roman: "III",
+      name: "Plant Force Britain",
+      note: "1/3 participant",
+      href: "https://www.plantforcebritain.co.uk",
+      embed: true,
+    },
     { roman: "IV", name: "GLYDx", note: "50% owner" },
     { roman: "V", name: "TheCandidate.io" },
     { roman: "VI", name: "Axelrod.Inc" },
     { roman: "VII", name: "Elektra.Inc" },
     {
       roman: "VIII",
-      name: "Elektra-Alexrod.com",
+      name: "Elektra-Axelrod.com",
       note: "Joint venture · Axelrod × Elektra",
+      href: "https://elektra-axelrod.com",
+      embed: true,
       span: 2,
     },
   ] satisfies Venture[],
