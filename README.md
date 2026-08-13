@@ -30,6 +30,6 @@ This project builds to a static `out/` folder for Porkbun.
 
 1. In Porkbun → Static Hosting → **GitHub Connect**
 2. Select repo `DaveySwift/davidswift.xyz`
-3. Set branch to **`Porkbun`** (not `main`)
+3. Set branch to **`Porkbun`**
 
-`main` holds the Next.js source. On every push to `main`, GitHub Actions builds the site and updates the `Porkbun` branch with flat static files (required by Porkbun).
+`Porkbun` is the only branch used for hosting. It contains the flat static export (`index.html`, assets) that Porkbun serves. Do not point GitHub Connect at `main` or any other branch.
