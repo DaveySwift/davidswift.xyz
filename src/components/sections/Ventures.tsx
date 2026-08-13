@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useConnect } from "@/components/providers/ConnectProvider";
 import { CornerFrame } from "@/components/ui/CornerFrame";
 import { DiamondIcon } from "@/components/ui/DiamondIcon";
 import { OffsiteFrame } from "@/components/ui/OffsiteFrame";
@@ -11,6 +12,7 @@ import { cn } from "@/lib/cn";
 type Preview = Pick<Venture, "name" | "href"> & { href: string };
 
 export function Ventures() {
+  const { openMailingList } = useConnect();
   const [preview, setPreview] = useState<Preview | null>(null);
 
   return (
@@ -33,12 +35,12 @@ export function Ventures() {
           {site.ventures.map((venture) => {
             const wide = venture.span === 2;
             const embed = Boolean(venture.href && venture.embed);
+            const underConstruction = !venture.href;
             const card = (
               <CornerFrame
                 className={cn(
-                  "h-full",
-                  wide &&
-                    "border-gold/50 lg:flex lg:min-h-[11rem] lg:flex-col lg:justify-center",
+                  "flex h-full w-full flex-col",
+                  wide && "border-gold/50 lg:min-h-[11rem]",
                 )}
               >
                 <div className="mb-6 flex items-start justify-between gap-4">
@@ -65,8 +67,13 @@ export function Ventures() {
                   </p>
                 )}
                 {embed ? (
-                  <p className="mt-4 font-sans text-xs uppercase tracking-[0.22em] text-gold/80">
+                  <p className="mt-auto pt-6 font-sans text-xs uppercase tracking-[0.18em] leading-relaxed text-gold/85">
                     View site
+                  </p>
+                ) : null}
+                {underConstruction ? (
+                  <p className="mt-auto pt-6 font-sans text-xs uppercase tracking-[0.18em] leading-relaxed text-gold/85">
+                    Foundations under construction. Click to join-in.
                   </p>
                 ) : null}
               </CornerFrame>
@@ -83,8 +90,17 @@ export function Ventures() {
                     onClick={() =>
                       setPreview({ name: venture.name, href: venture.href })
                     }
-                    className="block h-full w-full cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="flex h-full w-full cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     aria-label={`Open ${venture.name} website preview`}
+                  >
+                    {card}
+                  </button>
+                ) : underConstruction ? (
+                  <button
+                    type="button"
+                    onClick={() => openMailingList(venture.name)}
+                    className="flex h-full w-full cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    aria-label={`Join mailing list for ${venture.name}`}
                   >
                     {card}
                   </button>
