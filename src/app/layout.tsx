@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
     images: [
       {
-        url: "https://davidswift.xyz/og.png?v=passport1",
+        url: "https://davidswift.xyz/og.png?v=mugshot1",
         width: 1200,
         height: 630,
         alt: "David Swift — Capability Builder",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "David Swift | Capability Builder",
     description:
       "Building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
-    images: ["https://davidswift.xyz/og.png?v=passport1"],
+    images: ["https://davidswift.xyz/og.png?v=mugshot1"],
   },
 };
 
