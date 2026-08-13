@@ -42,8 +42,8 @@ export const site = {
     },
   ] as const,
   logo: {
-    src: "/images/logo-swift-gold.png",
-    alt: "David Swift logo — gold Art Deco swift emblem",
+    src: "/images/logo-swift.png",
+    alt: "David Swift logo — chrome swift emblem",
   },
   heroPortrait: {
     src: "/images/hero-portrait.png",

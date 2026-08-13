@@ -21,7 +21,12 @@ export const metadata: Metadata = {
   description:
     "David Swift — entrepreneur building knowledge, technologies, businesses and systems that enable future generations to thrive.",
   icons: {
-    icon: "/images/logo-swift-gold.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+      { url: "/images/logo-swift.png", type: "image/png", sizes: "688x688" },
+    ],
+    apple: "/images/logo-swift.png",
   },
   openGraph: {
     type: "website",
