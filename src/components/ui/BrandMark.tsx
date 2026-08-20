@@ -32,7 +32,7 @@ export function BrandMark({
           className="pointer-events-none absolute inset-0 rounded-full opacity-50 blur-md transition-opacity duration-500 group-hover:opacity-80"
           style={{
             background:
-              "radial-gradient(circle, rgba(120,190,255,0.28) 0%, rgba(200,210,220,0.12) 45%, transparent 70%)",
+              "radial-gradient(circle, rgba(212,175,55,0.32) 0%, rgba(212,175,55,0.08) 45%, transparent 70%)",
           }}
         />
         <Image

@@ -44,8 +44,8 @@ export const site = {
     },
   ] as const,
   logo: {
-    src: "/images/logo-swift.png",
-    alt: "David Swift logo — chrome swift emblem",
+    src: "/images/logo-orb.png",
+    alt: "David Swift — orb and chevron house mark",
   },
   heroPortrait: {
     src: "/images/hero-portrait.png",
@@ -53,7 +53,7 @@ export const site = {
   },
   ventures: [
     { roman: "I", name: "Swift-Tech Industries" },
-    { roman: "II", name: "Swift-Agro Sphere" },
+    { roman: "II", name: "Swift-Agrosphere" },
     {
       roman: "III",
       name: "Plant Force Britain",
