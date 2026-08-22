@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
     images: [
       {
-        url: "https://davidswift.xyz/og.png?v=mugshot1",
+        url: "https://davidswift.xyz/og.png?v=capacity1",
         width: 1200,
         height: 630,
         alt: "David Swift — Capability Builder",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "David Swift | Capability Builder",
     description:
       "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
-    images: ["https://davidswift.xyz/og.png?v=mugshot1"],
+    images: ["https://davidswift.xyz/og.png?v=capacity1"],
   },
 };
 
