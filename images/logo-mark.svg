@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <g stroke="#D4AF37" stroke-linejoin="miter">
+    <path d="M64 10 L118 64 L64 118 L10 64 Z" stroke-width="3"/>
+    <path d="M64 26 L102 64 L64 102 L26 64 Z" stroke-width="1.5" opacity="0.75"/>
+    <path d="M58 10 H70 M118 58 V70 M58 118 H70 M10 58 V70" stroke-width="2"/>
+  </g>
+  <text x="64" y="72" text-anchor="middle" font-family="Didot, Bodoni MT, Georgia, serif" font-size="54" fill="#D4AF37">S</text>
+</svg>
