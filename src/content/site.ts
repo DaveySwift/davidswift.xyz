@@ -8,19 +8,83 @@ export type Venture = {
   span?: 1 | 2;
 };
 
+export type Belief = {
+  roman: string;
+  title: string;
+  body: string;
+};
+
+export type Pillar = {
+  roman: string;
+  name: string;
+  body: string;
+};
+
 export const site = {
   name: "David Swift",
   title: "Capability Builder",
   roles: ["CEO", "CTO", "COO", "CAIO"] as const,
   headline: "Advance humanity's capability to thrive",
   support:
-    "Building the knowledge, technologies, businesses and systems that enable future generations to flourish.",
+    "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
   mission:
     "To advance humanity's capability by building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
   quote: "I don't solve problems. I build the human capacity to solve them.",
-  tagline: "Building systems for a more abundant future.",
+  tagline: "Build the capacity to thrive.",
   impactLine: "Long-term thinking. Real-world impact.",
-  pillars: ["Education", "Sustainable Infrastructure", "Capital"] as const,
+  meet:
+    "David Swift is an entrepreneur turned farmer and technologist — a long-horizon founder building carbon-negative infrastructure and human capability. Founder of MacroAgri in Abu Dhabi and partner in Plant Force Britain, he brings permaculture, the decades-ahead whole-systems design methodology rooted in farming, to modern technology and infrastructure.",
+  territory:
+    "Where capacity building, Earth systems and future life beyond Earth converge.",
+  architectureNote:
+    "The founder brand is the connective layer — making the shared purpose across the portfolio clear, memorable and directional.",
+  pillars: [
+    {
+      roman: "I",
+      name: "Education",
+      body: "Build human capability through knowledge.",
+    },
+    {
+      roman: "II",
+      name: "Sustainable Infrastructure",
+      body: "Build a more regenerative physical world.",
+    },
+    {
+      roman: "III",
+      name: "Capital",
+      body: "Back and scale people, ideas and ventures.",
+    },
+  ] satisfies Pillar[],
+  beliefs: [
+    {
+      roman: "I",
+      title: "Build capacity, not fixes",
+      body: "Prioritise the knowledge, tools and systems that give people greater agency at the next challenge.",
+    },
+    {
+      roman: "II",
+      title: "Regenerate before expanding",
+      body: "Treat sustainable land, crops and infrastructure as the foundation of resilient human progress.",
+    },
+    {
+      roman: "III",
+      title: "Think in decades, not quarters",
+      body: "Compound the portfolio through patient action, stewardship and durable institutions.",
+    },
+    {
+      roman: "IV",
+      title: "Prepare Earth for space",
+      body: "Begin with the conditions that sustain life here, then extend that capability beyond Earth.",
+    },
+  ] satisfies Belief[],
+  values: [
+    "Curiosity",
+    "Growth",
+    "Generosity",
+    "Connection",
+    "Optimism",
+    "Independence",
+  ] as const,
   linkedIn: "https://www.linkedin.com/in/dave-s-53620b124",
   x: "https://x.com/DaveySwift",
   website: "https://davidswift.xyz",
@@ -31,7 +95,6 @@ export const site = {
       src: "/images/bio-portrait.png",
       alt: "David Swift at DIFC Innovation Hub",
       caption: "Builder · DIFC Innovation Hub",
-      // Framed slice: focus on David at left, crop away excess wall
       objectPosition: "18% 42%",
     },
     {
@@ -39,7 +102,6 @@ export const site = {
       src: "/images/bio-family.jpg",
       alt: "David Swift with his wife during a collaborative strategy session",
       caption: "Family · Shared mission",
-      // Couple centered in frame (faces / upper bodies)
       objectPosition: "48% 32%",
     },
   ] as const,
@@ -67,6 +129,13 @@ export const site = {
     { roman: "VII", name: "Elektra.Inc" },
     {
       roman: "VIII",
+      name: "MacroAgri",
+      note: "Founder · Abu Dhabi",
+      href: "https://macroagri.com",
+      embed: true,
+    },
+    {
+      roman: "IX",
       name: "Elektra-Axelrod.com",
       note: "Joint venture · Axelrod × Elektra",
       href: "https://elektra-axelrod.com",
@@ -77,6 +146,7 @@ export const site = {
   nav: [
     { href: "#mission", label: "Mission" },
     { href: "#ventures", label: "Ventures" },
+    { href: "#principles", label: "Principles" },
     { href: "#about", label: "About" },
     { href: "#contact", label: "Contact" },
   ] as const,

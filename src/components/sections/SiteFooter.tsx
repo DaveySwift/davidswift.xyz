@@ -10,7 +10,10 @@ export function SiteFooter() {
         <div className="max-w-sm">
           <BrandMark size={36} />
           <p className="mt-4 font-sans text-sm leading-relaxed text-muted">
-            {site.pillars.join(" · ")}
+            {site.tagline}
+          </p>
+          <p className="mt-2 font-sans text-xs uppercase tracking-[0.22em] text-gold/70">
+            {site.pillars.map((pillar) => pillar.name).join(" · ")}
           </p>
         </div>
         <div className="flex flex-col gap-3 font-sans text-xs uppercase tracking-[0.28em] text-foreground/80">

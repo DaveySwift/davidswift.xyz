@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
   title: "David Swift | Capability Builder",
   description:
-    "David Swift — entrepreneur building knowledge, technologies, businesses and systems that enable future generations to thrive.",
+    "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "David Swift",
     title: "David Swift | Capability Builder",
     description:
-      "Building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
+      "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
     images: [
       {
         url: "https://davidswift.xyz/og.png?v=mugshot1",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "David Swift | Capability Builder",
     description:
-      "Building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
+      "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
     images: ["https://davidswift.xyz/og.png?v=mugshot1"],
   },
 };

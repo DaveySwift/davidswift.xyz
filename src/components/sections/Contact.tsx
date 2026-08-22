@@ -16,11 +16,14 @@ export function Contact() {
           title="Contact"
         />
         <p className="mx-auto max-w-2xl font-display text-2xl uppercase tracking-[0.16em] text-foreground md:text-3xl">
-          {site.impactLine}
+          {site.tagline}
         </p>
-        <p className="mx-auto mt-6 max-w-lg font-sans text-lg leading-relaxed text-muted">
-          Connect on LinkedIn to discuss ventures, capability building, and
-          long-horizon collaboration.
+        <p className="mx-auto mt-6 max-w-xl font-sans text-lg leading-relaxed text-muted">
+          {site.territory}
+        </p>
+        <p className="mx-auto mt-4 max-w-lg font-sans text-base leading-relaxed text-foreground/70">
+          Connect to discuss ventures, regenerative infrastructure, capability
+          building, and long-horizon collaboration.
         </p>
         <p className="mt-8 font-sans text-xs uppercase tracking-[0.35em] text-gold">
           {site.roles.join(" · ")}
