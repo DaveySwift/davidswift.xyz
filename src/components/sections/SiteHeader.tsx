@@ -41,11 +41,11 @@ export function SiteHeader() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-6 md:gap-6 md:px-8">
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-6 md:gap-6 md:px-8">
         <BrandMark size={64} showWordmark={false} />
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-8 lg:flex"
+          className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:flex"
         >
           {site.nav.map((item) => (
             <a
@@ -57,23 +57,27 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="ml-auto flex items-center justify-end gap-2 sm:gap-3">
           <HeaderSocialLinks linkedIn={site.linkedIn} x={site.x} />
-          <Button
-            type="button"
-            variant="outline"
+          <div
             className={cn(
-              "px-4 transition-all duration-500 ease-out sm:px-5",
+              "overflow-hidden transition-[max-width,opacity,transform,margin] duration-500 ease-out",
               pastHero
-                ? "translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-1 opacity-0",
+                ? "ml-0 max-w-[11rem] translate-x-0 opacity-100"
+                : "pointer-events-none ml-0 max-w-0 translate-x-6 opacity-0",
             )}
-            tabIndex={pastHero ? 0 : -1}
             aria-hidden={!pastHero}
-            onClick={openConnect}
           >
-            Connect
-          </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="whitespace-nowrap px-4 sm:px-5"
+              tabIndex={pastHero ? 0 : -1}
+              onClick={openConnect}
+            >
+              Connect
+            </Button>
+          </div>
         </div>
       </div>
     </header>
