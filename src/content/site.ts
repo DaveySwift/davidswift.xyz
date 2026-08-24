@@ -21,19 +21,19 @@ export type Pillar = {
 };
 
 export const site = {
-  name: "David Swift",
+  name: "David J Swift",
   title: "Capability Builder",
   roles: ["CEO", "CTO", "COO", "CAIO"] as const,
-  headline: "Advance humanity's capability to thrive",
+  headline: "Advancing humanity's leap capability",
   support:
-    "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
+    "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
   mission:
     "To advance humanity's capability by building the knowledge, technologies, businesses and systems that enable future generations to thrive.",
   quote: "I don't solve problems. I build the human capacity to solve them.",
   tagline: "Build the capacity to thrive.",
   impactLine: "Long-term thinking. Real-world impact.",
   meet:
-    "David Swift is an entrepreneur turned farmer and technologist — a long-horizon founder building carbon-negative infrastructure and human capability. Founder of MacroAgri in Abu Dhabi and partner in Plant Force Britain, he brings permaculture, the decades-ahead whole-systems design methodology rooted in farming, to modern technology and infrastructure.",
+    "David J Swift is an entrepreneur turned farmer and technologist — a long-horizon founder building carbon-negative infrastructure and human capability. Founder of MacroAgri in Abu Dhabi and partner in Plant Force Britain, he brings permaculture, the decades-ahead whole-systems design methodology rooted in farming, to modern technology and infrastructure.",
   territory:
     "Where capacity building, Earth systems and future life beyond Earth converge.",
   architectureNote:
@@ -93,25 +93,25 @@ export const site = {
     {
       roman: "I",
       src: "/images/bio-portrait.png",
-      alt: "David Swift at DIFC Innovation Hub",
+      alt: "David J Swift at DIFC Innovation Hub",
       caption: "Builder · DIFC Innovation Hub",
       objectPosition: "18% 42%",
     },
     {
       roman: "II",
       src: "/images/bio-family.jpg",
-      alt: "David Swift with his wife during a collaborative strategy session",
+      alt: "David J Swift with his wife during a collaborative strategy session",
       caption: "Family · Shared mission",
       objectPosition: "48% 32%",
     },
   ] as const,
   logo: {
-    src: "/images/logo-orb.png",
-    alt: "David Swift — orb and chevron house mark",
+    src: "/images/logo-djs.png",
+    alt: "David J Swift — DJS monogram",
   },
   heroPortrait: {
     src: "/images/hero-portrait.png",
-    alt: "David Swift — mugshot-style portrait",
+    alt: "David J Swift — mugshot-style portrait",
   },
   ventures: [
     { roman: "I", name: "Swift-Tech Industries" },

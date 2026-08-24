@@ -66,10 +66,10 @@ export function HeaderSocialLinks({
 }: HeaderSocialLinksProps) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
-      <SocialIconLink href={x} label="David Swift on X">
+      <SocialIconLink href={x} label="David J Swift on X">
         <XIcon />
       </SocialIconLink>
-      <SocialIconLink href={linkedIn} label="David Swift on LinkedIn">
+      <SocialIconLink href={linkedIn} label="David J Swift on LinkedIn">
         <LinkedInIcon />
       </SocialIconLink>
     </div>

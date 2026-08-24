@@ -17,44 +17,44 @@ const josefin = Josefin_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
-  title: "David Swift | Capability Builder",
+  title: "David J Swift | Capability Builder",
   description:
-    "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
+    "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
       { url: "/favicon.png", type: "image/png", sizes: "64x64" },
       {
-        url: "/images/logo-orb-icon.png",
+        url: "/images/logo-djs-icon.png",
         type: "image/png",
         sizes: "180x180",
       },
     ],
-    apple: "/images/logo-orb-icon.png",
+    apple: "/images/logo-djs-icon.png",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://davidswift.xyz",
-    siteName: "David Swift",
-    title: "David Swift | Capability Builder",
+    siteName: "David J Swift",
+    title: "David J Swift | Capability Builder",
     description:
-      "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
+      "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
     images: [
       {
-        url: "https://davidswift.xyz/og.png?v=capacity1",
+        url: "https://davidswift.xyz/og.png?v=djs1",
         width: 1200,
         height: 630,
-        alt: "David Swift — Capability Builder",
+        alt: "David J Swift — Capability Builder",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "David Swift | Capability Builder",
+    title: "David J Swift | Capability Builder",
     description:
-      "Entrepreneur, farmer and technologist — building carbon-negative infrastructure and human capability for a more resilient future.",
-    images: ["https://davidswift.xyz/og.png?v=capacity1"],
+      "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
+    images: ["https://davidswift.xyz/og.png?v=djs1"],
   },
 };
 

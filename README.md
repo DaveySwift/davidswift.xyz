@@ -1,6 +1,6 @@
-# David Swift — davidswift.xyz
+# David J Swift — davidswift.xyz
 
-Art Deco personal brand site for David Swift (Capability Builder).
+Art Deco personal brand site for David J Swift (Capability Builder).
 
 ## Stack
 

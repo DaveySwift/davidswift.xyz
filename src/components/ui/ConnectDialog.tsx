@@ -94,7 +94,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
         body: JSON.stringify({
           name: parsed.data.name,
           email: parsed.data.email,
-          _subject: "David Swift — Connect inquiry",
+          _subject: "David J Swift — Connect inquiry",
         }),
       });
 
