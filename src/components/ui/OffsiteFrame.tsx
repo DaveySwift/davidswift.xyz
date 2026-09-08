@@ -133,7 +133,7 @@ export function OffsiteFrame({ open, src, name, onClose }: Props) {
           className="pointer-events-none absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-gold/60"
         />
 
-        <div className="mb-4 flex items-start justify-between gap-4">
+        <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
           <div className="min-w-0">
             <p className="font-sans text-xs uppercase tracking-[0.35em] text-gold">
               Offsite
@@ -145,20 +145,20 @@ export function OffsiteFrame({ open, src, name, onClose }: Props) {
               {name}
             </h2>
           </div>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="grid w-full grid-cols-[minmax(0,1fr)_auto] gap-2 sm:flex sm:w-auto sm:shrink-0 sm:items-center">
             <a
               href={src}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center border border-gold/50 px-4 font-sans text-xs uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex h-12 min-w-0 items-center justify-center border border-gold/50 px-3 font-sans text-xs uppercase tracking-[0.18em] text-gold transition-all duration-300 hover:bg-gold hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:px-4 sm:tracking-[0.22em]"
             >
-              Visit {host}
+              <span className="truncate">Visit {host}</span>
             </a>
             <button
               ref={closeRef}
               type="button"
               onClick={onClose}
-              className="inline-flex h-12 items-center justify-center border border-gold/50 px-4 font-sans text-xs uppercase tracking-[0.28em] text-gold transition-all duration-300 hover:bg-gold hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex h-12 shrink-0 items-center justify-center border border-gold/50 px-4 font-sans text-xs uppercase tracking-[0.28em] text-gold transition-all duration-300 hover:bg-gold hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Close
             </button>

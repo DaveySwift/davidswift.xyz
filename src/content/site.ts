@@ -58,23 +58,23 @@ export const site = {
   beliefs: [
     {
       roman: "I",
-      title: "Build capacity, not fixes",
-      body: "Prioritise the knowledge, tools and systems that give people greater agency at the next challenge.",
+      title: "Build abundance, not solutions",
+      body: "Create surplus capability — knowledge, tools and systems that compound — instead of one-off fixes for the present.",
     },
     {
       roman: "II",
-      title: "Regenerate before expanding",
-      body: "Treat sustainable land, crops and infrastructure as the foundation of resilient human progress.",
+      title: "Restore whilst expanding",
+      body: "Remain driven, focused and aware whilst simultaneously facing the challenges of land, crops, credits, infrastructure and resources — so living systems heal as human reach scales.",
     },
     {
       roman: "III",
-      title: "Think in decades, not quarters",
-      body: "Compound the portfolio through patient action, stewardship and durable institutions.",
+      title: "Think in centuries, and planetary scales",
+      body: "Design for multi-century horizons and whole-planet effects — not quarterly cycles or local optima.",
     },
     {
       roman: "IV",
-      title: "Prepare Earth for space",
-      body: "Begin with the conditions that sustain life here, then extend that capability beyond Earth.",
+      title: "Prepare space for Earthlings",
+      body: "Build the habitats, systems and know-how that let Earthlings inhabit and flourish beyond this planet.",
     },
   ] satisfies Belief[],
   values: [
