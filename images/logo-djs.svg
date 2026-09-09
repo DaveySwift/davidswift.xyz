@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Left rail + short top/bottom; open right with corner ticks -->
+  <path d="M20 24 V104" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="square"/>
+  <path d="M20 24 H78" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="square"/>
+  <path d="M20 104 H78" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="square"/>
+  <path d="M100 24 V32" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="square"/>
+  <path d="M100 96 V104" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="28" y="82" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="36" fill="#D4AF37" letter-spacing="0.5">DJS</text>
+</svg>
