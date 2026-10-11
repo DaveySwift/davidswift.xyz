@@ -84,7 +84,7 @@ export const site = {
     },
     {
       eyebrow: "Frontier",
-      title: "Enterprise",
+      title: "Enterprise 2.0",
       body: "Precision technology, manufacturing and patient capital shaping how the next century builds, funds and scales.",
       themes: ["Precision tech", "Funds & resources", "Long horizon"],
       ventures: ["Elektra-Axelrod.com"],
