@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
     images: [
       {
-        url: "https://davidswift.xyz/og.png?v=lv1",
+        url: "https://davidswift.xyz/og.png?v=lv2",
         width: 1200,
         height: 630,
         alt: "David Swift — Technology. Ventures. A 100-Year Horizon.",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "David Swift | Technology. Ventures. A 100-Year Horizon.",
     description:
       "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
-    images: ["https://davidswift.xyz/og.png?v=lv1"],
+    images: ["https://davidswift.xyz/og.png?v=lv2"],
   },
 };
 
