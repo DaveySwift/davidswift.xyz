@@ -68,12 +68,9 @@ export function Contact() {
             A broader commercial record across land, capital and community.
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
-            {site.ventures.map((venture) => (
-              <li
-                key={venture.name}
-                className="font-sans text-sm text-foreground/85"
-              >
-                {venture.name}
+            {site.otherVentures.map((name) => (
+              <li key={name} className="font-sans text-sm text-foreground/85">
+                {name}
               </li>
             ))}
           </ul>

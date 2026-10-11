@@ -229,6 +229,12 @@ export const site = {
       span: 2,
     },
   ] satisfies Venture[],
+  otherVentures: [
+    "Plant Force Britain",
+    "MacroAgri",
+    "Superintelligence",
+    "Elektra-Axelrod.com",
+  ] as const,
   nav: [
     { href: "#work", label: "Work" },
     { href: "#mission", label: "Mission" },
