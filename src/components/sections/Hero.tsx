@@ -14,14 +14,14 @@ export function Hero() {
       aria-labelledby="hero-brand"
       className="relative flex min-h-[100svh] items-end overflow-hidden pb-16 pt-28 md:pb-24 md:pt-32"
     >
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <Image
           src={site.heroEarth.src}
           alt=""
           fill
           priority
           unoptimized
-          className="object-cover object-[center_65%] opacity-90"
+          className="animate-earth-drift object-cover object-[center_65%] opacity-90"
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/55 to-background" />

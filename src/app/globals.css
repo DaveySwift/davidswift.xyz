@@ -97,6 +97,17 @@ body::after {
   }
 }
 
+/* Lovable hero: Earth slowly inhales and exhales. */
+@keyframes earth-drift {
+  0%,
+  100% {
+    transform: translate(0) scale(1.04);
+  }
+  50% {
+    transform: translateY(-1.5%) scale(1.07);
+  }
+}
+
 .animate-sf-fade-up {
   animation: sf-fade-up 550ms ease-out both;
 }
@@ -105,9 +116,15 @@ body::after {
   animation: marquee 28s linear infinite;
 }
 
+.animate-earth-drift {
+  animation: earth-drift 18s ease-in-out infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-sf-fade-up,
-  .animate-marquee {
+  .animate-marquee,
+  .animate-earth-drift {
     animation: none;
   }
 }
