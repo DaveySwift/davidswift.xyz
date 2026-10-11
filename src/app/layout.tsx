@@ -23,15 +23,15 @@ export const metadata: Metadata = {
   title: pageTitle,
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+      { url: "/favicon.ico?v=badge", sizes: "48x48" },
+      { url: "/favicon.png?v=badge", type: "image/png", sizes: "64x64" },
       {
-        url: "/images/logo-swift-sf-icon.png",
+        url: "/images/logo-swift-sf-icon.png?v=badge",
         type: "image/png",
         sizes: "180x180",
       },
     ],
-    apple: "/images/logo-swift-sf-icon.png",
+    apple: "/images/logo-swift-sf-icon.png?v=badge",
   },
   openGraph: {
     type: "website",
