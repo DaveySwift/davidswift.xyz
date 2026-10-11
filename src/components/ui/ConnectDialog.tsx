@@ -18,12 +18,15 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
   const titleId = useId();
   const nameId = useId();
   const emailId = useId();
+  const messageId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState<{
     name?: string;
     email?: string;
+    message?: string;
   }>({});
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -61,12 +64,13 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
     event.preventDefault();
     setErrorMessage(null);
 
-    const parsed = connectFormSchema.safeParse({ name, email });
+    const parsed = connectFormSchema.safeParse({ name, email, message });
     if (!parsed.success) {
-      const nextErrors: { name?: string; email?: string } = {};
+      const nextErrors: { name?: string; email?: string; message?: string } =
+        {};
       for (const issue of parsed.error.issues) {
         const key = issue.path[0];
-        if (key === "name" || key === "email") {
+        if (key === "name" || key === "email" || key === "message") {
           nextErrors[key] = issue.message;
         }
       }
@@ -94,6 +98,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
         body: JSON.stringify({
           name: parsed.data.name,
           email: parsed.data.email,
+          ...(parsed.data.message ? { message: parsed.data.message } : {}),
           _subject: "David Swift — Connect inquiry",
         }),
       });
@@ -221,6 +226,39 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
                   className="mt-2 font-sans text-sm text-lime"
                 >
                   {fieldErrors.email}
+                </p>
+              ) : null}
+            </div>
+
+            <div>
+              <label
+                htmlFor={messageId}
+                className="mb-2 block font-sans text-xs uppercase tracking-[0.28em] text-lime"
+              >
+                Message{" "}
+                <span className="normal-case tracking-normal text-muted">
+                  (optional)
+                </span>
+              </label>
+              <textarea
+                id={messageId}
+                name="message"
+                rows={4}
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                className="w-full resize-y border-0 border-b-2 border-lime bg-transparent px-3 py-2 font-sans text-base text-foreground placeholder:text-muted transition-all focus:border-lime focus:shadow-[0_4px_10px_rgba(182,255,59,0.2)] focus:outline-none"
+                placeholder="What would you like to talk about?"
+                aria-invalid={Boolean(fieldErrors.message)}
+                aria-describedby={
+                  fieldErrors.message ? `${messageId}-error` : undefined
+                }
+              />
+              {fieldErrors.message ? (
+                <p
+                  id={`${messageId}-error`}
+                  className="mt-2 font-sans text-sm text-lime"
+                >
+                  {fieldErrors.message}
                 </p>
               ) : null}
             </div>
