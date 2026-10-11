@@ -45,9 +45,9 @@ export function Bio() {
               About {site.name}
             </h2>
             <div className="mt-6 space-y-5 font-sans text-base leading-relaxed text-foreground/80 md:text-lg">
-              <p>{site.meet}</p>
-              <p>{site.familyLine}</p>
-              <p className="text-muted">{site.territory}</p>
+              {site.about.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             <p className="mt-10 font-sans text-xs font-semibold uppercase tracking-[0.28em] text-lime text-muted">

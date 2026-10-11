@@ -54,12 +54,12 @@ export const site = {
   quote: "Solving problems to enable others.",
   tagline: "Build the capacity to thrive.",
   impactLine: "Long-term thinking. Real-world impact.",
-  meet:
-    "David Swift is an entrepreneur, green-fingered technologist and long-horizon founder — building MacroAgri from Abu Dhabi, advancing Plant Force Britain, and shaping a house that spans intelligent systems, capital, precision manufacturing and human capability. He works where regenerative infrastructure meets modern enterprise: solving problems to enable others, and advancing the capacity for future generations to thrive on Earth and beyond.",
-  familyLine:
-    "With family at the centre — a shared story of ambition, partnership, and the long view.",
-  territory:
-    "Where capacity building, Earth systems and future life beyond Earth converge.",
+  about: [
+    "David Swift is a technologist, entrepreneur and long-horizon founder building ventures, startups and human capability for a more intelligent future.",
+    "Raised in the UK and now based in Dubai, David has built across technology, enterprise and agriculture. Whole-systems thinking taught him to look beyond the immediate cycle: to connect decisions, consequences and opportunities across decades.",
+    "His work and commercial experience spans across MacroAgri, Plant Force Britain and a wider portfolio of startups.",
+    "His mission is to provision humanity with the knowledge, technologies and systems that help future generations thrive, on Earth and eventually for intelligent life beyond it.",
+  ] as const,
   architectureNote:
     "The founder brand is the connective layer — making the shared purpose across the portfolio clear, memorable and directional.",
   marquee: [
