@@ -117,8 +117,26 @@ body::after {
 }
 
 .animate-earth-drift {
-  animation: earth-drift 18s ease-in-out infinite;
-  will-change: transform;
+  animation: earth-drift 18s ease-in-out infinite both;
+  transform-origin: center center;
+}
+
+/* Hide the bar with the document scroll, including before client JS runs. */
+@supports (animation-timeline: scroll()) {
+  .site-header {
+    animation: site-header-hide linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 12px;
+  }
+}
+
+@keyframes site-header-hide {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

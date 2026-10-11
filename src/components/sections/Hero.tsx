@@ -15,15 +15,18 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-end overflow-hidden pb-16 pt-28 md:pb-24 md:pt-32"
     >
       <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src={site.heroEarth.src}
-          alt=""
-          fill
-          priority
-          unoptimized
-          className="animate-earth-drift object-cover object-[center_65%] opacity-90"
-          aria-hidden="true"
-        />
+        <div className="animate-earth-drift absolute inset-0">
+          <Image
+            src={site.heroEarth.src}
+            alt=""
+            fill
+            priority
+            unoptimized
+            className="object-cover object-[center_65%] opacity-90"
+            style={{ objectFit: "cover" }}
+            aria-hidden="true"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/55 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/40" />
       </div>

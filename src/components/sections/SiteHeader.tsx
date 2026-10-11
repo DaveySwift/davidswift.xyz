@@ -32,6 +32,7 @@ export function SiteHeader() {
     <header
       inert={hidden ? true : undefined}
       className={cn(
+        "site-header",
         "fixed inset-x-0 top-0 z-40 transition-[transform,background-color,border-color,backdrop-filter] duration-300 ease-out motion-reduce:transition-none",
         hidden ? "-translate-y-full" : "translate-y-0",
         scrolled
