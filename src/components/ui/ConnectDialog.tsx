@@ -94,7 +94,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
         body: JSON.stringify({
           name: parsed.data.name,
           email: parsed.data.email,
-          _subject: "David J Swift — Connect inquiry",
+          _subject: "David Swift — Connect inquiry",
         }),
       });
 
@@ -118,21 +118,21 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-md animate-deco-fade-up border border-gold/40 bg-card p-8 glow-gold md:p-10"
+        className="relative w-full max-w-md animate-sf-fade-up border border-lime/40 bg-card p-8 glow-lime md:p-10"
         onClick={(event) => event.stopPropagation()}
       >
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-gold/60"
+          className="pointer-events-none absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-lime/60"
         />
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-gold/60"
+          className="pointer-events-none absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-lime/60"
         />
 
         <div className="mb-8 flex items-start justify-between gap-4">
           <div>
-            <p className="font-sans text-xs uppercase tracking-[0.35em] text-gold">
+            <p className="font-sans text-xs uppercase tracking-[0.35em] text-lime">
               Correspondence
             </p>
             <h2
@@ -146,7 +146,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
             ref={closeRef}
             type="button"
             onClick={onClose}
-            className="inline-flex h-12 items-center justify-center border border-gold/50 px-4 font-sans text-xs uppercase tracking-[0.28em] text-gold transition-all duration-300 hover:bg-gold hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="inline-flex h-12 items-center justify-center border border-lime/50 px-4 font-sans text-xs uppercase tracking-[0.28em] text-lime transition-all duration-300 hover:bg-lime hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             Close
           </button>
@@ -154,7 +154,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
 
         {status === "success" ? (
           <div className="space-y-6 text-center">
-            <p className="font-display text-xl uppercase tracking-[0.16em] text-gold">
+            <p className="font-display text-xl uppercase tracking-[0.16em] text-lime">
               Message received
             </p>
             <p className="font-sans text-base leading-relaxed text-foreground/85">
@@ -169,7 +169,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
             <div>
               <label
                 htmlFor={nameId}
-                className="mb-2 block font-sans text-xs uppercase tracking-[0.28em] text-gold"
+                className="mb-2 block font-sans text-xs uppercase tracking-[0.28em] text-lime"
               >
                 Name
               </label>
@@ -179,7 +179,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
                 autoComplete="name"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
-                className="h-12 w-full border-0 border-b-2 border-gold bg-transparent px-3 py-2 font-sans text-base text-foreground placeholder:text-muted transition-all focus:border-gold-light focus:shadow-[0_4px_10px_rgba(212,175,55,0.2)] focus:outline-none"
+                className="h-12 w-full border-0 border-b-2 border-lime bg-transparent px-3 py-2 font-sans text-base text-foreground placeholder:text-muted transition-all focus:border-lime focus:shadow-[0_4px_10px_rgba(182,255,59,0.2)] focus:outline-none"
                 placeholder="Your name"
                 aria-invalid={Boolean(fieldErrors.name)}
                 aria-describedby={fieldErrors.name ? `${nameId}-error` : undefined}
@@ -187,7 +187,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
               {fieldErrors.name ? (
                 <p
                   id={`${nameId}-error`}
-                  className="mt-2 font-sans text-sm text-gold-light"
+                  className="mt-2 font-sans text-sm text-lime"
                 >
                   {fieldErrors.name}
                 </p>
@@ -197,7 +197,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
             <div>
               <label
                 htmlFor={emailId}
-                className="mb-2 block font-sans text-xs uppercase tracking-[0.28em] text-gold"
+                className="mb-2 block font-sans text-xs uppercase tracking-[0.28em] text-lime"
               >
                 Email
               </label>
@@ -208,7 +208,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
                 autoComplete="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="h-12 w-full border-0 border-b-2 border-gold bg-transparent px-3 py-2 font-sans text-base text-foreground placeholder:text-muted transition-all focus:border-gold-light focus:shadow-[0_4px_10px_rgba(212,175,55,0.2)] focus:outline-none"
+                className="h-12 w-full border-0 border-b-2 border-lime bg-transparent px-3 py-2 font-sans text-base text-foreground placeholder:text-muted transition-all focus:border-lime focus:shadow-[0_4px_10px_rgba(182,255,59,0.2)] focus:outline-none"
                 placeholder="you@example.com"
                 aria-invalid={Boolean(fieldErrors.email)}
                 aria-describedby={
@@ -218,7 +218,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
               {fieldErrors.email ? (
                 <p
                   id={`${emailId}-error`}
-                  className="mt-2 font-sans text-sm text-gold-light"
+                  className="mt-2 font-sans text-sm text-lime"
                 >
                   {fieldErrors.email}
                 </p>
@@ -226,7 +226,7 @@ export function ConnectDialog({ open, onClose }: ConnectDialogProps) {
             </div>
 
             {errorMessage ? (
-              <p className="font-sans text-sm text-gold-light" role="alert">
+              <p className="font-sans text-sm text-lime" role="alert">
                 {errorMessage}
               </p>
             ) : null}
