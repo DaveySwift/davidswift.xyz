@@ -143,7 +143,7 @@ export const site = {
     {
       label: "Years 70+",
       title: "Beyond",
-      body: "The conditions for life beyond Earth, built on everything the first century makes possible.",
+      body: "The framework for intelligent life beyond Earth, built on everything the first century makes possible.",
     },
   ] satisfies HorizonStage[],
   values: [
