@@ -50,7 +50,7 @@ export const site = {
   mission:
     "Advancing humanity's capability to build technologies, businesses and systems that enable future generations to thrive.",
   missionHeadline:
-    "Build useful technologies today while expanding what people will be capable of tomorrow.",
+    "Build useful resources today while expanding what people will be capable of tomorrow.",
   quote: "Solving problems to enable others.",
   tagline: "Build the capacity to thrive.",
   impactLine: "Long-term thinking. Real-world impact.",
