@@ -17,12 +17,10 @@ const barlow = Barlow({
 });
 
 const pageTitle = "David Swift | Enterprise 2.0. A 100-Year Horizon.";
-const pageDescription = site.about[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
   title: pageTitle,
-  description: pageDescription,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -41,7 +39,6 @@ export const metadata: Metadata = {
     url: "https://davidswift.xyz",
     siteName: "David Swift",
     title: pageTitle,
-    description: pageDescription,
     images: [
       {
         url: "https://davidswift.xyz/og.png?v=lv2",
@@ -54,7 +51,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
-    description: pageDescription,
     images: ["https://davidswift.xyz/og.png?v=lv2"],
   },
 };
