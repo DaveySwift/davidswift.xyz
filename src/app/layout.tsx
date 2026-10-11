@@ -16,7 +16,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const pageTitle = "David Swift | Enterprise 2.0. A 100-Year Horizon.";
+const pageTitle = "Infrastructure | Intelligence | Enterprise 2.0";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
