@@ -55,7 +55,7 @@ export const site = {
   tagline: "Build the capacity to thrive.",
   impactLine: "Long-term thinking. Real-world impact.",
   about: [
-    "David Swift is a technologist, entrepreneur and long-horizon founder building ventures, startups and human capability for a more intelligent future.",
+    "David Swift is an entrepreneur, would be technologist and long-horizon founder building ventures, startups and human capability for a more intelligent future.",
     "Raised in the UK and now based in Dubai, David has built across technology, enterprise and agriculture. Whole-systems thinking taught him to look beyond the immediate cycle: to connect decisions, consequences and opportunities across decades.",
     "His work and commercial experience spans across MacroAgri, Plant Force Britain and a wider portfolio of startups.",
     "His mission is to provision humanity with the knowledge, technologies and systems that help future generations thrive, on Earth and eventually for intelligent life beyond it.",
