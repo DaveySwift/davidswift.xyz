@@ -22,13 +22,13 @@ export function Hero() {
             fill
             priority
             unoptimized
-            className="object-cover object-[center_65%] opacity-90"
-            style={{ objectFit: "cover" }}
+            className="object-cover object-top"
+            style={{ objectFit: "cover", objectPosition: "center top" }}
             aria-hidden="true"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/55 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-transparent via-[58%] to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/20" />
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-10 px-6 md:grid-cols-[1.15fr_0.85fr] md:items-end md:gap-14 md:px-8">

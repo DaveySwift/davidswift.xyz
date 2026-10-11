@@ -186,7 +186,7 @@ export const site = {
     alt: "David Swift",
   },
   heroEarth: {
-    src: "/images/hero-earth.jpg",
+    src: "/images/hero-earth-horizon.jpg",
     alt: "Earth from space",
   },
   heroPortrait: {
