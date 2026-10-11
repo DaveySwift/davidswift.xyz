@@ -121,12 +121,22 @@ body::after {
   transform-origin: center center;
 }
 
-/* Hide the bar with the document scroll, including before client JS runs. */
+/* Hide with scroll position. The bar stays transparent — a fading fill flashes on the way back up. */
 @supports (animation-timeline: scroll()) {
   .site-header {
     animation: site-header-hide linear both;
     animation-timeline: scroll(root);
     animation-range: 0px 12px;
+  }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .site-header {
+    transition: translate 300ms ease-out;
+  }
+
+  .site-header[data-hidden="true"] {
+    translate: 0 -100%;
   }
 }
 
@@ -144,6 +154,10 @@ body::after {
   .animate-marquee,
   .animate-earth-drift {
     animation: none;
+  }
+
+  .site-header {
+    transition: none;
   }
 }
 

@@ -26,14 +26,16 @@ describe("SiteHeader", () => {
     );
 
     const header = screen.getByRole("banner");
-    expect(header.className).toContain("translate-y-0");
+    expect(header).toHaveAttribute("data-hidden", "false");
+    expect(header.className).not.toContain("bg-background/");
 
     setScrollY(12);
-    expect(header.className).toContain("-translate-y-full");
+    expect(header).toHaveAttribute("data-hidden", "true");
     expect(header).toHaveAttribute("inert");
+    expect(header.className).not.toContain("bg-background/");
 
     setScrollY(0);
-    expect(header.className).toContain("translate-y-0");
+    expect(header).toHaveAttribute("data-hidden", "false");
     expect(header).not.toHaveAttribute("inert");
   });
 });

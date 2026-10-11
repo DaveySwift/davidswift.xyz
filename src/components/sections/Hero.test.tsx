@@ -18,6 +18,10 @@ describe("Hero", () => {
     expect(
       screen.getByRole("button", { name: /get in touch/i }),
     ).toBeInTheDocument();
-    expect(document.querySelector(".animate-earth-drift img")).toBeInTheDocument();
+    const earth = document.querySelector(".animate-earth-drift img");
+    expect(earth).toBeInTheDocument();
+    expect(earth).toHaveAttribute("fetchpriority", "high");
+    expect(earth).toHaveAttribute("decoding", "sync");
+    expect(earth).toHaveAttribute("loading", "eager");
   });
 });

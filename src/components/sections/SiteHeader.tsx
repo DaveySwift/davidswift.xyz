@@ -3,25 +3,18 @@
 import { BrandMark } from "@/components/ui/BrandMark";
 import { useConnect } from "@/components/providers/ConnectProvider";
 import { site } from "@/content/site";
-import { cn } from "@/lib/cn";
 import { useEffect, useState } from "react";
 
 const HIDE_AFTER_PX = 8;
 
 export function SiteHeader() {
   const { openConnect } = useConnect();
-  const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      const y = window.scrollY;
-      const nextHidden = y > HIDE_AFTER_PX;
-      const nextScrolled = y > 24;
+      const nextHidden = window.scrollY > HIDE_AFTER_PX;
       setHidden((current) => (current === nextHidden ? current : nextHidden));
-      setScrolled((current) =>
-        current === nextScrolled ? current : nextScrolled,
-      );
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -31,14 +24,8 @@ export function SiteHeader() {
   return (
     <header
       inert={hidden ? true : undefined}
-      className={cn(
-        "site-header",
-        "fixed inset-x-0 top-0 z-40 transition-[transform,background-color,border-color,backdrop-filter] duration-300 ease-out motion-reduce:transition-none",
-        hidden ? "-translate-y-full" : "translate-y-0",
-        scrolled
-          ? "border-b border-foreground/10 bg-background/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
-      )}
+      data-hidden={hidden ? "true" : "false"}
+      className="site-header fixed inset-x-0 top-0 z-40 border-b border-transparent bg-transparent"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3 md:px-8 md:py-4">
         <BrandMark

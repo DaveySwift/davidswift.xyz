@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { useConnect } from "@/components/providers/ConnectProvider";
 import { site } from "@/content/site";
@@ -16,13 +15,13 @@ export function Hero() {
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="animate-earth-drift absolute inset-0">
-          <Image
+          <img
             src={site.heroEarth.src}
             alt=""
-            fill
-            priority
-            unoptimized
-            className="object-cover object-top"
+            fetchPriority="high"
+            decoding="sync"
+            loading="eager"
+            className="absolute inset-0 h-full w-full object-cover object-top"
             style={{ objectFit: "cover", objectPosition: "center top" }}
             aria-hidden="true"
           />

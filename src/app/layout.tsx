@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Space_Grotesk } from "next/font/google";
+import { site } from "@/content/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -64,6 +65,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${spaceGrotesk.variable} ${barlow.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href={site.heroEarth.src}
+          fetchPriority="high"
+          blocking="render"
+        />
+      </head>
       <body className="site-shell min-h-full flex flex-col bg-background text-foreground">
         <a
           href="#main"
