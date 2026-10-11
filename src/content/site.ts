@@ -48,7 +48,7 @@ export const site = {
   heroSupport:
     "David Swift builds and backs technology ventures designed around the systems, knowledge and human capability future generations will need.",
   mission:
-    "Advancing humanity's capability to build technologies, businesses and systems that enable future generations to thrive.",
+    "Provisioning humanity to take its next great leap by building businesses and systems whose fruits will give future generations the capability, opportunity, and hope to flourish.",
   missionHeadline:
     "Build useful resources today while expanding what people will be capable of tomorrow.",
   quote: "Solving problems to enable others.",
