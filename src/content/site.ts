@@ -46,7 +46,7 @@ export const site = {
   support:
     "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
   heroSupport:
-    "David Swift builds and backs technology ventures designed around the systems, knowledge and human capability future generations will need.",
+    "David Swift builds and backs ventures across infrastructure, intelligence and enterprise 2.0, so future generations have the opportunity and hope to flourish.",
   mission:
     "Provisioning humanity to take its next great leap by building businesses and systems whose fruits will give future generations the opportunity and hope to flourish.",
   missionHeadline:
