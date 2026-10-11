@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     title: pageTitle,
     images: [
       {
-        url: "https://davidswift.xyz/og.jpg?v=lv4",
+        url: "https://davidswift.xyz/og.jpg?v=lv3",
         width: 1200,
         height: 630,
-        alt: "David builds and backs ventures so future generations have the opportunity, and intelligent life finds hope.",
+        alt: "David Swift — Science. Technology. What comes next.",
         type: "image/jpeg",
       },
     ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
-    images: ["https://davidswift.xyz/og.jpg?v=lv4"],
+    images: ["https://davidswift.xyz/og.jpg?v=lv3"],
   },
 };
 
