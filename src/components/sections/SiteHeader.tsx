@@ -6,12 +6,23 @@ import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { useEffect, useState } from "react";
 
+const HIDE_AFTER_PX = 8;
+
 export function SiteHeader() {
   const { openConnect } = useConnect();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      const y = window.scrollY;
+      const nextHidden = y > HIDE_AFTER_PX;
+      const nextScrolled = y > 24;
+      setHidden((current) => (current === nextHidden ? current : nextHidden));
+      setScrolled((current) =>
+        current === nextScrolled ? current : nextScrolled,
+      );
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -19,8 +30,10 @@ export function SiteHeader() {
 
   return (
     <header
+      inert={hidden ? true : undefined}
       className={cn(
-        "fixed inset-x-0 top-0 z-40 transition-[background-color,border-color,backdrop-filter] duration-400 ease-out",
+        "fixed inset-x-0 top-0 z-40 transition-[transform,background-color,border-color,backdrop-filter] duration-300 ease-out motion-reduce:transition-none",
+        hidden ? "-translate-y-full" : "translate-y-0",
         scrolled
           ? "border-b border-foreground/10 bg-background/85 backdrop-blur-md"
           : "border-b border-transparent bg-transparent",
