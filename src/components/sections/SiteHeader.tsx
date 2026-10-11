@@ -40,8 +40,12 @@ export function SiteHeader() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-5 md:px-8">
-        <BrandMark size={44} mark="icon" showWordmark={false} />
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3 md:px-8 md:py-4">
+        <BrandMark
+          mark="banner"
+          showWordmark={false}
+          imageClassName="h-12 w-auto sm:h-14 md:h-20"
+        />
         <nav
           aria-label="Main navigation"
           className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:flex"

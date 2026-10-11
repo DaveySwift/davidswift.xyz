@@ -181,6 +181,10 @@ export const site = {
     src: "/images/logo-swift-sf-hero.png",
     alt: "David Swift — DS space mark",
   },
+  headerLogo: {
+    src: "/images/logo-david-swift-wordmark.png",
+    alt: "David Swift",
+  },
   heroEarth: {
     src: "/images/hero-earth.jpg",
     alt: "Earth from space",

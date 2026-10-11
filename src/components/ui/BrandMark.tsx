@@ -9,8 +9,9 @@ type BrandMarkProps = {
   showWordmark?: boolean;
   wordmarkClassName?: string;
   href?: string;
-  /** Prefer circular DS hero mark for nav */
-  mark?: "wordmark" | "icon";
+  /** Prefer circular DS hero mark for nav, or the wide header wordmark */
+  mark?: "wordmark" | "icon" | "banner";
+  imageClassName?: string;
 };
 
 export function BrandMark({
@@ -20,9 +21,20 @@ export function BrandMark({
   wordmarkClassName,
   href = "/",
   mark = "icon",
+  imageClassName,
 }: BrandMarkProps) {
-  const src = mark === "icon" ? site.heroLogo.src : site.logo.src;
-  const alt = mark === "icon" ? site.heroLogo.alt : site.logo.alt;
+  const src =
+    mark === "banner"
+      ? site.headerLogo.src
+      : mark === "icon"
+        ? site.heroLogo.src
+        : site.logo.src;
+  const alt =
+    mark === "banner"
+      ? site.headerLogo.alt
+      : mark === "icon"
+        ? site.heroLogo.alt
+        : site.logo.alt;
 
   return (
     <Link
@@ -36,10 +48,19 @@ export function BrandMark({
       <Image
         src={src}
         alt={alt}
-        width={size}
-        height={size}
-        className="relative z-10 h-auto w-auto object-contain"
-        style={{ width: size, height: "auto" }}
+        width={mark === "banner" ? 2432 : size}
+        height={mark === "banner" ? 853 : size}
+        className={cn(
+          "relative z-10 object-contain",
+          imageClassName ?? "h-auto w-auto",
+        )}
+        style={
+          imageClassName
+            ? undefined
+            : mark === "banner"
+              ? { height: size, width: "auto" }
+              : { width: size, height: "auto" }
+        }
         priority
         unoptimized
       />
