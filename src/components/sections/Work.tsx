@@ -44,21 +44,23 @@ export function Work() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 border-t border-foreground/10 pt-5">
-                <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-foreground/60">
-                  Ventures
-                </p>
-                <ul className="mt-3 flex flex-col gap-1.5">
-                  {pillar.ventures.map((venture) => (
-                    <li
-                      key={venture}
-                      className="font-sans text-sm text-foreground/90"
-                    >
-                      {venture}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {pillar.ventures.length > 0 ? (
+                <div className="mt-8 border-t border-foreground/10 pt-5">
+                  <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-foreground/60">
+                    Ventures
+                  </p>
+                  <ul className="mt-3 flex flex-col gap-1.5">
+                    {pillar.ventures.map((venture) => (
+                      <li
+                        key={venture}
+                        className="font-sans text-sm text-foreground/90"
+                      >
+                        {venture}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </li>
           ))}
         </ul>

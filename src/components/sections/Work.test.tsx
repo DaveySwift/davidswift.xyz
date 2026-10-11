@@ -10,7 +10,11 @@ describe("Work", () => {
     expect(screen.getByText("Enterprise")).toBeInTheDocument();
     expect(screen.getByText("MacroAgri")).toBeInTheDocument();
     expect(screen.getByText("Plant Force Britain")).toBeInTheDocument();
-    expect(screen.getByText("mindout.ai")).toBeInTheDocument();
-    expect(screen.getByText("Elektra.Inc")).toBeInTheDocument();
+    expect(screen.getByText("Elektra-Axelrod.com")).toBeInTheDocument();
+    expect(screen.queryByText("mindout.ai")).not.toBeInTheDocument();
+    expect(screen.queryByText("TheCandidate.io")).not.toBeInTheDocument();
+    expect(screen.queryByText("GLYDx")).not.toBeInTheDocument();
+    expect(screen.queryByText("Elektra.Inc")).not.toBeInTheDocument();
+    expect(screen.queryByText("Axelrod.Inc")).not.toBeInTheDocument();
   });
 });

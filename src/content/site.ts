@@ -80,14 +80,14 @@ export const site = {
       title: "Intelligence",
       body: "Education, applied intelligence and human systems that expand what people are capable of learning, building and becoming.",
       themes: ["Cosmic intelligence", "Human resources", "Capability"],
-      ventures: ["mindout.ai", "TheCandidate.io", "GLYDx"],
+      ventures: [],
     },
     {
       eyebrow: "Frontier",
       title: "Enterprise",
       body: "Precision technology, manufacturing and patient capital shaping how the next century builds, funds and scales.",
       themes: ["Precision tech", "Funds & resources", "Long horizon"],
-      ventures: ["Elektra.Inc", "Axelrod.Inc", "Elektra-Axelrod.com"],
+      ventures: ["Elektra-Axelrod.com"],
     },
   ] satisfies WorkPillar[],
   pillars: [
