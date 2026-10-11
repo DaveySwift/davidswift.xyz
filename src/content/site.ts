@@ -80,7 +80,7 @@ export const site = {
       title: "Intelligence",
       body: "Education, applied intelligence and human systems that expand what people are capable of learning, building and becoming.",
       themes: ["Cosmic intelligence", "Human resources", "Capability"],
-      ventures: [],
+      ventures: ["Superintelligence coming soon"],
     },
     {
       eyebrow: "Frontier",
