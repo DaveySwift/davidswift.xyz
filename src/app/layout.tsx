@@ -16,11 +16,13 @@ const barlow = Barlow({
   display: "swap",
 });
 
+const pageTitle = "David Swift | Technology. Ventures. A 100-Year Horizon.";
+const pageDescription = site.about[0];
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
-  title: "David Swift | Technology. Ventures. A 100-Year Horizon.",
-  description:
-    "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
+  title: pageTitle,
+  description: pageDescription,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -38,23 +40,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://davidswift.xyz",
     siteName: "David Swift",
-    title: "David Swift | Technology. Ventures. A 100-Year Horizon.",
-    description:
-      "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
+    title: pageTitle,
+    description: pageDescription,
     images: [
       {
         url: "https://davidswift.xyz/og.png?v=lv2",
         width: 1200,
         height: 630,
-        alt: "David Swift — Technology. Ventures. A 100-Year Horizon.",
+        alt: "David Swift — Science. Technology. What comes next.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "David Swift | Technology. Ventures. A 100-Year Horizon.",
-    description:
-      "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
+    title: pageTitle,
+    description: pageDescription,
     images: ["https://davidswift.xyz/og.png?v=lv2"],
   },
 };
