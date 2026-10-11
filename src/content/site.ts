@@ -152,7 +152,6 @@ export const site = {
     "Generosity",
     "Connection",
     "Optimism",
-    "Independence",
   ] as const,
   linkedIn: "https://www.linkedin.com/in/dave-s-53620b124",
   x: "https://x.com/DaveySwift",
