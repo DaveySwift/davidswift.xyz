@@ -16,7 +16,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const pageTitle = "David Swift | Technology. Ventures. A 100-Year Horizon.";
+const pageTitle = "David Swift | Enterprise 2.0. A 100-Year Horizon.";
 const pageDescription = site.about[0];
 
 export const metadata: Metadata = {
