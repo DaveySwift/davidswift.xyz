@@ -46,7 +46,7 @@ export const site = {
   support:
     "Entrepreneur and green-fingered technologist — building toward an amazing, environmentally positive future.",
   heroSupport:
-    "David builds and backs ventures so future generations have the opportunity, and intelligent life finds hope.",
+    "David builds and backs ventures that expand opportunity for future generations and extend the hope and horizons of intelligent life.",
   mission:
     "Provisioning humanity to take its next great leap by building businesses and systems whose fruits will give future generations the opportunity and hope to flourish.",
   missionHeadline:
