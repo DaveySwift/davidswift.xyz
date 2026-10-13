@@ -70,7 +70,7 @@ export const site = {
   workPillars: [
     {
       eyebrow: "Foundation",
-      title: "Infrastructure",
+      title: "Regenerative",
       body: "Sustainable future crops and low-carbon technologies: carbon credits and green energy engineered to prove their value in the world now.",
       themes: ["Future crops", "Carbon credits", "Green energy"],
       ventures: ["MacroAgri", "Plant Force Britain"],
