@@ -26,7 +26,7 @@ Build useful resources today while expanding what people will be capable of tomo
 
 Provisioning humanity to take its next great leap by building businesses and systems whose fruits will give future generations the opportunity and hope to flourish.
 
-The first decades prove useful systems in the world now. What follows is knowledge, human capability and communities that can carry the work forward. Beyond that, the framework for intelligent life beyond Earth, built on everything the first century makes possible.
+The first decades are for ventures, systems and ideas that earn their place in the world now. What follows is knowledge, human capability and communities that take the work further. Beyond that, the framework for intelligent life beyond Earth, built on everything the first century makes possible.
 
 ## David Swift
 
