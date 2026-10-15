@@ -132,13 +132,13 @@ export const site = {
   horizon: [
     {
       label: "Years 0 to 25",
-      title: "Build",
-      body: "Current technology ventures, useful systems and ideas designed to prove their value in the world now.",
+      title: "Prove",
+      body: "Current technology ventures, useful systems and ideas that earn their place in the world now.",
     },
     {
       label: "Years 25+",
-      title: "Capability",
-      body: "Knowledge, human capability and enduring communities that can carry the work forward.",
+      title: "Carry",
+      body: "Knowledge, human capability and enduring communities that take the work further.",
     },
     {
       label: "Years 70+",

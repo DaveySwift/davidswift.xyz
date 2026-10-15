@@ -16,8 +16,8 @@ His mission is to provision humanity with the knowledge, technologies and system
 
 ## Horizon
 
-- Years 0 to 25, Build: Current technology ventures, useful systems and ideas designed to prove their value in the world now.
-- Years 25+, Capability: Knowledge, human capability and enduring communities that can carry the work forward.
+- Years 0 to 25, Prove: Current technology ventures, useful systems and ideas that earn their place in the world now.
+- Years 25+, Carry: Knowledge, human capability and enduring communities that take the work further.
 - Years 70+, Beyond: The framework for intelligent life beyond Earth, built on everything the first century makes possible.
 
 ## Values
