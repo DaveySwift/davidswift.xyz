@@ -35,27 +35,26 @@ export function Contact() {
         <ul className="mt-16 grid grid-cols-1 gap-8 border-t border-foreground/10 pt-10 md:grid-cols-3">
           <li>
             <p className="font-display text-lg font-semibold text-foreground">
-              Speaking
+              Conversations
             </p>
             <p className="mt-2 font-sans text-sm leading-relaxed text-muted">
-              Keynotes, panels and conversations on building for the long
-              horizon.
+              Keynotes and panels on building for the long horizon.
             </p>
           </li>
           <li>
             <p className="font-display text-lg font-semibold text-foreground">
-              Consultations
+              Counsel
             </p>
             <p className="mt-2 font-sans text-sm leading-relaxed text-muted">
-              Whole-systems advice across technology, land and infrastructure.
+              Whole-systems thinking across technology, land and infrastructure.
             </p>
           </li>
           <li>
             <p className="font-display text-lg font-semibold text-foreground">
-              Collaboration
+              Ventures
             </p>
             <p className="mt-2 font-sans text-sm leading-relaxed text-muted">
-              Partnerships and ventures, from early ideas to patient capital.
+              Partnerships, from early ideas to patient capital.
             </p>
           </li>
         </ul>
