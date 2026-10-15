@@ -1,34 +1,39 @@
-# davidswift.xyz
+# Science. Technology. What comes next.
 
-Personal site for David Swift. The live site is [davidswift.xyz](https://davidswift.xyz).
+David builds and backs ventures that expand opportunity for future generations and extend the hope and horizons of intelligent life.
 
-The public line is Regenerative, Intelligence, and Enterprise 2.0.
+[davidswift.xyz](https://davidswift.xyz)
 
-## Stack
+## Regenerative
 
-- Next.js (App Router), TypeScript, Tailwind CSS, pnpm
-- Static export (`output: "export"`)
-- The connect form posts to Formspree (`NEXT_PUBLIC_FORMSPREE_ID`)
+Sustainable future crops and low-carbon technologies: carbon credits and green energy engineered to prove their value in the world now.
 
-## Develop
+MacroAgri. Plant Force Britain.
 
-```bash
-pnpm install
-cp .env.example .env.local
-pnpm dev
-```
+## Intelligence
 
-## Scripts
+Education, applied intelligence and human systems that expand what people are capable of learning, building and becoming.
 
-- `pnpm dev` — local server
-- `pnpm build` — write the static site to `out/`
-- `pnpm lint` — ESLint, warnings treated as errors
-- `pnpm test` — Jest and Testing Library
+## Enterprise 2.0
 
-## Hosting
+Precision technology, manufacturing and patient capital shaping how the next century builds, funds and scales.
 
-Porkbun Static Hosting is connected to the **`Porkbun`** branch. That branch is the flat export (`index.html` and assets), not this source tree. GitHub’s default branch is `Porkbun`, so the repository home page only shows a README that lives on that branch.
+Elektra.
 
-Point GitHub Connect at `Porkbun`. Do not point it at a source branch.
+## A hundred-year horizon
 
-To publish, build with `pnpm build`, replace the files on `Porkbun` with the contents of `out/`, and keep this `README.md` in place.
+Build useful resources today while expanding what people will be capable of tomorrow.
+
+Provisioning humanity to take its next great leap by building businesses and systems whose fruits will give future generations the opportunity and hope to flourish.
+
+The first decades prove useful systems in the world now. What follows is knowledge, human capability and communities that can carry the work forward. Beyond that, the framework for intelligent life beyond Earth, built on everything the first century makes possible.
+
+## David Swift
+
+David Swift is an entrepreneur, would be technologist and long-horizon founder building ventures, startups and human capability for a more intelligent future.
+
+Raised in the UK and now based in Dubai, he has built across technology, enterprise and agriculture. Whole-systems thinking taught him to look beyond the immediate cycle: to connect decisions, consequences and opportunities across decades.
+
+Solving problems to enable others.
+
+Curiosity · Growth · Generosity · Connection · Optimism
