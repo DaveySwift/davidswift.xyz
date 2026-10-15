@@ -16,11 +16,43 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const pageTitle = "Regenerative | Intelligence | Enterprise 2.0";
+const pageTitle = "David Swift | Regenerative · Intelligence · Enterprise 2.0";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${site.website}/#page`,
+      url: `${site.website}/`,
+      name: pageTitle,
+      description: site.heroSupport,
+      inLanguage: "en",
+      about: { "@id": `${site.website}/#david-swift` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${site.website}/#david-swift`,
+      name: site.name,
+      url: site.website,
+      description: site.heroSupport,
+      image: `${site.website}${site.bioGallery[0].src}`,
+      homeLocation: {
+        "@type": "Place",
+        name: "Dubai",
+      },
+      sameAs: [site.linkedIn, site.x],
+      knowsAbout: site.workPillars.map((pillar) => pillar.title),
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
   title: pageTitle,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico?v=badge", sizes: "48x48" },
@@ -63,6 +95,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${spaceGrotesk.variable} ${barlow.variable} h-full antialiased`}
     >
       <head>
+        <meta name="description" content={site.heroSupport} />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="Summary for language models"
+        />
         <link
           rel="preload"
           as="image"
@@ -72,6 +111,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="site-shell min-h-full flex flex-col bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-lime focus:px-4 focus:py-2 focus:font-sans focus:text-sm focus:uppercase focus:tracking-widest focus:text-background"

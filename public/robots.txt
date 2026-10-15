@@ -1,0 +1,6 @@
+# A short brief for language models: https://davidswift.xyz/llms.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://davidswift.xyz/sitemap.xml
