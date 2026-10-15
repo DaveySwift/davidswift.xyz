@@ -36,4 +36,4 @@ Raised in the UK and now based in Dubai, he has built across technology, enterpr
 
 Solving problems to enable others.
 
-Curiosity · Growth · Generosity · Connection · Optimism
+Curiosity · Growth · Optimism
