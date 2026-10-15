@@ -13,7 +13,7 @@ describe("Contact", () => {
     expect(screen.getByText("Plant Force Britain")).toBeInTheDocument();
     expect(screen.getByText("MacroAgri")).toBeInTheDocument();
     expect(screen.getByText("Superintelligence")).toBeInTheDocument();
-    expect(screen.getByText("Elektra-Axelrod.com")).toBeInTheDocument();
+    expect(screen.getByText("Elektra")).toBeInTheDocument();
     expect(screen.queryByText("mindout.ai")).not.toBeInTheDocument();
     expect(screen.queryByText("TheCandidate.io")).not.toBeInTheDocument();
     expect(screen.queryByText("GLYDx")).not.toBeInTheDocument();

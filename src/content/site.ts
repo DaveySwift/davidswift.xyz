@@ -87,7 +87,7 @@ export const site = {
       title: "Enterprise 2.0",
       body: "Precision technology, manufacturing and patient capital shaping how the next century builds, funds and scales.",
       themes: ["Precision tech", "Funds & resources", "Long horizon"],
-      ventures: ["Elektra-Axelrod.com"],
+      ventures: ["Elektra"],
     },
   ] satisfies WorkPillar[],
   pillars: [
@@ -225,7 +225,7 @@ export const site = {
     },
     {
       roman: "VIII",
-      name: "Elektra-Axelrod.com",
+      name: "Elektra",
       note: "Joint venture · Axelrod × Elektra",
       href: "https://elektra-axelrod.com",
       embed: true,
@@ -236,7 +236,7 @@ export const site = {
     "Plant Force Britain",
     "MacroAgri",
     "Superintelligence",
-    "Elektra-Axelrod.com",
+    "Elektra",
   ] as const,
   nav: [
     { href: "#work", label: "Work" },
