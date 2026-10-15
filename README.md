@@ -1,35 +1,34 @@
-# David J Swift — davidswift.xyz
+# davidswift.xyz
 
-Art Deco personal brand site for David J Swift (Capability Builder).
+Personal site for David Swift. The live site is [davidswift.xyz](https://davidswift.xyz).
+
+The public line is Regenerative, Intelligence, and Enterprise 2.0.
 
 ## Stack
 
-- Next.js (App Router) + TypeScript + Tailwind CSS + pnpm
-- Formspree connect form (`NEXT_PUBLIC_FORMSPREE_ID`)
+- Next.js (App Router), TypeScript, Tailwind CSS, pnpm
+- Static export (`output: "export"`)
+- The connect form posts to Formspree (`NEXT_PUBLIC_FORMSPREE_ID`)
 
 ## Develop
 
 ```bash
 pnpm install
-cp .env.example .env.local   # set Formspree ID
+cp .env.example .env.local
 pnpm dev
 ```
 
 ## Scripts
 
 - `pnpm dev` — local server
-- `pnpm build` — production build
-- `pnpm lint` — ESLint (warnings as errors)
-- `pnpm test` — Jest + Testing Library
+- `pnpm build` — write the static site to `out/`
+- `pnpm lint` — ESLint, warnings treated as errors
+- `pnpm test` — Jest and Testing Library
 
-# Production: [https://davidswift.xyz](https://davidswift.xyz)
+## Hosting
 
-## Porkbun Static Hosting
+Porkbun Static Hosting is connected to the **`Porkbun`** branch. That branch is the flat export (`index.html` and assets), not this source tree. GitHub’s default branch is `Porkbun`, so the repository home page only shows a README that lives on that branch.
 
-This project builds to a static `out/` folder for Porkbun.
+Point GitHub Connect at `Porkbun`. Do not point it at a source branch.
 
-1. In Porkbun → Static Hosting → **GitHub Connect**
-2. Select repo `DaveySwift/davidswift.xyz`
-3. Set branch to **`Porkbun`**
-
-`Porkbun` is the only branch used for hosting. It contains the flat static export (`index.html`, assets) that Porkbun serves. Do not point GitHub Connect at `main` or any other branch.
+To publish, build with `pnpm build`, replace the files on `Porkbun` with the contents of `out/`, and keep this `README.md` in place.
