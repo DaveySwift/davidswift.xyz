@@ -1,3 +1,3 @@
 :HL["/_next/static/chunks/3ao2vqgcjl8cs.css","style"]
-:HL["/images/hero-earth-horizon.jpg","image",{"fetchPriority":"high"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"fO946vLPMX1_APOaR5a0H"}
+:HL["/images/hero-earth-horizon-v2.jpg","image",{"fetchPriority":"high"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"dGB9HnFUmcQ6wFOqUAjav"}
