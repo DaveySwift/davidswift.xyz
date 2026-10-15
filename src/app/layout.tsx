@@ -1,60 +1,58 @@
 import type { Metadata } from "next";
-import { Josefin_Sans, Marcellus } from "next/font/google";
+import { Barlow, Space_Grotesk } from "next/font/google";
+import { site } from "@/content/site";
 import "./globals.css";
 
-const marcellus = Marcellus({
-  weight: "400",
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-marcellus",
+  variable: "--font-space-grotesk",
   display: "swap",
 });
 
-const josefin = Josefin_Sans({
+const barlow = Barlow({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-josefin",
+  variable: "--font-barlow",
   display: "swap",
 });
+
+const pageTitle = "Regenerative | Intelligence | Enterprise 2.0";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidswift.xyz"),
-  title: "David J Swift | Capability Builder",
-  description:
-    "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
+  title: pageTitle,
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+      { url: "/favicon.ico?v=badge", sizes: "48x48" },
+      { url: "/favicon.png?v=badge", type: "image/png", sizes: "64x64" },
       {
-        url: "/images/logo-djs-icon.png",
+        url: "/images/logo-swift-sf-icon.png?v=badge",
         type: "image/png",
         sizes: "180x180",
       },
     ],
-    apple: "/images/logo-djs-icon.png",
+    apple: "/images/logo-swift-sf-icon.png?v=badge",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://davidswift.xyz",
-    siteName: "David J Swift",
-    title: "David J Swift | Capability Builder",
-    description:
-      "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
+    siteName: "David Swift",
+    title: pageTitle,
     images: [
       {
-        url: "https://davidswift.xyz/og.png?v=djs1",
+        url: "https://davidswift.xyz/og.jpg?v=lv3",
         width: 1200,
         height: 630,
-        alt: "David J Swift — Capability Builder",
+        alt: "David Swift — Science. Technology. What comes next.",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "David J Swift | Capability Builder",
-    description:
-      "Entrepreneur, farmer and technologist — Building towards the amazing carbon-negative future.",
-    images: ["https://davidswift.xyz/og.png?v=djs1"],
+    title: pageTitle,
+    images: ["https://davidswift.xyz/og.jpg?v=lv3"],
   },
 };
 
@@ -62,12 +60,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${marcellus.variable} ${josefin.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${barlow.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href={site.heroEarth.src}
+          fetchPriority="high"
+          blocking="render"
+        />
+      </head>
       <body className="site-shell min-h-full flex flex-col bg-background text-foreground">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-gold focus:px-4 focus:py-2 focus:font-sans focus:text-sm focus:uppercase focus:tracking-widest focus:text-background"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-lime focus:px-4 focus:py-2 focus:font-sans focus:text-sm focus:uppercase focus:tracking-widest focus:text-background"
         >
           Skip to content
         </a>

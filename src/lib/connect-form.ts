@@ -11,6 +11,12 @@ export const connectFormSchema = z.object({
     .trim()
     .email("Please enter a valid email")
     .max(120, "Email is too long"),
+  message: z
+    .string()
+    .trim()
+    .max(2000, "Message is too long")
+    .optional()
+    .default(""),
 });
 
 export type ConnectFormValues = z.infer<typeof connectFormSchema>;

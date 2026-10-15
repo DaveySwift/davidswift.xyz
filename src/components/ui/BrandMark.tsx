@@ -9,15 +9,33 @@ type BrandMarkProps = {
   showWordmark?: boolean;
   wordmarkClassName?: string;
   href?: string;
+  /** Prefer circular DS hero mark for nav, or the wide header wordmark */
+  mark?: "wordmark" | "icon" | "banner";
+  imageClassName?: string;
 };
 
 export function BrandMark({
   className,
   size = 48,
-  showWordmark = true,
+  showWordmark = false,
   wordmarkClassName,
   href = "/",
+  mark = "icon",
+  imageClassName,
 }: BrandMarkProps) {
+  const src =
+    mark === "banner"
+      ? site.headerLogo.src
+      : mark === "icon"
+        ? site.heroLogo.src
+        : site.logo.src;
+  const alt =
+    mark === "banner"
+      ? site.headerLogo.alt
+      : mark === "icon"
+        ? site.heroLogo.alt
+        : site.logo.alt;
+
   return (
     <Link
       href={href}
@@ -25,31 +43,31 @@ export function BrandMark({
         "group inline-flex items-center gap-3 transition-opacity duration-300 hover:opacity-95",
         className,
       )}
+      aria-label={`${site.name}, back to top`}
     >
-      <span className="relative inline-flex shrink-0 items-center justify-center">
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 rounded-full opacity-50 blur-md transition-opacity duration-500 group-hover:opacity-80"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(212,175,55,0.32) 0%, rgba(212,175,55,0.08) 45%, transparent 70%)",
-          }}
-        />
-        <Image
-          src={site.logo.src}
-          alt={site.logo.alt}
-          width={size}
-          height={size}
-          className="relative z-10 h-auto w-auto object-contain"
-          style={{ width: size, height: size }}
-          priority
-          unoptimized
-        />
-      </span>
+      <Image
+        src={src}
+        alt={alt}
+        width={mark === "banner" ? 2432 : size}
+        height={mark === "banner" ? 853 : size}
+        className={cn(
+          "relative z-10 object-contain",
+          imageClassName ?? "h-auto w-auto",
+        )}
+        style={
+          imageClassName
+            ? undefined
+            : mark === "banner"
+              ? { height: size, width: "auto" }
+              : { width: size, height: "auto" }
+        }
+        priority
+        unoptimized
+      />
       {showWordmark ? (
         <span
           className={cn(
-            "font-display text-sm uppercase tracking-[0.28em] text-foreground md:text-base",
+            "font-display text-sm font-semibold uppercase tracking-[0.22em] text-foreground md:text-base",
             wordmarkClassName,
           )}
         >

@@ -6,11 +6,11 @@ type Variant = "default" | "solid" | "outline";
 
 const variantClasses: Record<Variant, string> = {
   default:
-    "border-2 border-gold bg-transparent text-gold hover:bg-gold hover:text-background hover:glow-gold-strong",
+    "border-2 border-lime bg-transparent text-lime hover:bg-lime hover:text-background hover:glow-lime",
   solid:
-    "border-2 border-gold bg-gold text-background hover:bg-gold-light hover:border-gold-light",
+    "border-2 border-lime bg-lime text-background hover:bg-lime-dark hover:border-lime-dark glow-lime",
   outline:
-    "border border-gold bg-transparent text-gold hover:bg-midnight hover:text-foreground",
+    "border border-foreground/25 bg-transparent text-foreground hover:border-lime hover:text-lime",
 };
 
 type CommonProps = {
@@ -38,7 +38,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex h-12 min-h-12 items-center justify-center px-8 font-sans text-sm uppercase tracking-[0.2em] transition-all duration-500 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-60",
+    "inline-flex h-12 min-h-12 items-center justify-center gap-2 px-8 font-sans text-sm font-semibold uppercase tracking-[0.16em] transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-60",
     variantClasses[variant],
     className,
   );

@@ -1,28 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f2f0e4;
-  --card: #141414;
-  --gold: #d4af37;
-  --gold-light: #f2e8c4;
-  --midnight: #1e3d59;
-  --muted: #888888;
-  --border-gold: #d4af37;
-  --glow-gold: 0 0 15px rgba(212, 175, 55, 0.2);
-  --glow-gold-strong: 0 0 20px rgba(212, 175, 55, 0.4);
+  --background: #070a0f;
+  --foreground: #f4f7fb;
+  --card: #12171f;
+  --muted: #9aa3b2;
+  --lime: #b6ff3b;
+  --lime-dark: #8fd41f;
+  --navy: #0e141c;
+  --border: rgba(244, 247, 251, 0.12);
+  --glow-lime: 0 0 24px rgba(182, 255, 59, 0.28);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-midnight: var(--midnight);
   --color-muted: var(--muted);
-  --font-display: var(--font-marcellus);
-  --font-sans: var(--font-josefin);
+  --color-lime: var(--lime);
+  --color-lime-dark: var(--lime-dark);
+  --color-navy: var(--navy);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-barlow);
   --radius-none: 0px;
   --radius-sm: 2px;
 }
@@ -34,35 +33,27 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-josefin), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Diagonal crosshatch at low opacity */
+/* Subtle star field */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.45;
   background-image:
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 11px,
-      rgba(212, 175, 55, 0.9) 11px,
-      rgba(212, 175, 55, 0.9) 12px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 11px,
-      rgba(212, 175, 55, 0.9) 11px,
-      rgba(212, 175, 55, 0.9) 12px
-    );
+    radial-gradient(1px 1px at 12% 18%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 28% 62%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 46% 28%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 67% 74%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 83% 22%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 91% 58%, rgba(182, 255, 59, 0.35), transparent);
 }
 
-/* Subtle film grain */
+/* Film grain */
 body::after {
   content: "";
   position: fixed;
@@ -79,55 +70,17 @@ body::after {
 }
 
 .font-display {
-  font-family: var(--font-marcellus), ui-serif, Georgia, serif;
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 }
 
-.glow-gold {
-  box-shadow: var(--glow-gold);
+.glow-lime {
+  box-shadow: var(--glow-lime);
 }
 
-.glow-gold-strong {
-  box-shadow: var(--glow-gold-strong);
-}
-
-.double-frame {
-  border: 1px solid rgba(212, 175, 55, 0.55);
-  padding: 0.5rem;
-  background: var(--card);
-}
-
-.double-frame-inner {
-  border: 6px solid #0a0a0a;
-  outline: 1px solid rgba(212, 175, 55, 0.25);
-}
-
-.sunburst {
-  background:
-    radial-gradient(
-      ellipse 80% 60% at 50% 40%,
-      rgba(212, 175, 55, 0.16) 0%,
-      rgba(212, 175, 55, 0.06) 35%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle at 50% 45%,
-      transparent 0%,
-      transparent 18%,
-      rgba(212, 175, 55, 0.04) 19%,
-      transparent 20%,
-      transparent 28%,
-      rgba(212, 175, 55, 0.035) 29%,
-      transparent 30%,
-      transparent 38%,
-      rgba(212, 175, 55, 0.03) 39%,
-      transparent 40%
-    );
-}
-
-@keyframes deco-fade-up {
+@keyframes sf-fade-up {
   from {
     opacity: 0;
-    transform: translateY(1.5rem);
+    transform: translateY(1.25rem);
   }
   to {
     opacity: 1;
@@ -135,49 +88,80 @@ body::after {
   }
 }
 
-@keyframes deco-sunburst-in {
+@keyframes marquee {
   from {
-    opacity: 0;
-    transform: scale(0.92);
+    transform: translateX(0);
   }
   to {
-    opacity: 1;
-    transform: scale(1);
+    transform: translateX(-50%);
   }
 }
 
-@keyframes deco-track-in {
+/* Lovable hero: Earth slowly inhales and exhales. */
+@keyframes earth-drift {
+  0%,
+  100% {
+    transform: translate(0) scale(1.04);
+  }
+  50% {
+    transform: translateY(-1.5%) scale(1.07);
+  }
+}
+
+.animate-sf-fade-up {
+  animation: sf-fade-up 550ms ease-out both;
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-earth-drift {
+  animation: earth-drift 18s ease-in-out infinite both;
+  transform-origin: center center;
+}
+
+/* Hide with scroll position. The bar stays transparent — a fading fill flashes on the way back up. */
+@supports (animation-timeline: scroll()) {
+  .site-header {
+    animation: site-header-hide linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 12px;
+  }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .site-header {
+    transition: translate 300ms ease-out;
+  }
+
+  .site-header[data-hidden="true"] {
+    translate: 0 -100%;
+  }
+}
+
+@keyframes site-header-hide {
   from {
-    opacity: 0;
-    letter-spacing: 0.45em;
+    translate: 0 0;
   }
   to {
-    opacity: 1;
-    letter-spacing: 0.2em;
+    translate: 0 -100%;
   }
-}
-
-.animate-deco-fade-up {
-  animation: deco-fade-up 500ms ease-out both;
-}
-
-.animate-deco-sunburst {
-  animation: deco-sunburst-in 700ms ease-out both;
-}
-
-.animate-deco-track {
-  animation: deco-track-in 600ms ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-deco-fade-up,
-  .animate-deco-sunburst,
-  .animate-deco-track {
+  .animate-sf-fade-up,
+  .animate-marquee,
+  .animate-earth-drift {
     animation: none;
+  }
+
+  .site-header {
+    transition: none;
   }
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--lime);
   outline-offset: 2px;
 }

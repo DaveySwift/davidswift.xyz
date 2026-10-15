@@ -20,7 +20,7 @@ function SocialIconLink({
       rel="noopener noreferrer"
       aria-label={label}
       className={cn(
-        "inline-flex h-12 w-12 items-center justify-center border border-gold/45 text-gold transition-all duration-300 hover:border-gold hover:bg-gold hover:text-background hover:glow-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "inline-flex h-12 w-12 items-center justify-center border border-lime/45 text-lime transition-all duration-300 hover:border-lime hover:bg-lime hover:text-background hover:glow-lime focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         className,
       )}
     >
@@ -66,10 +66,10 @@ export function HeaderSocialLinks({
 }: HeaderSocialLinksProps) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
-      <SocialIconLink href={x} label="David J Swift on X">
+      <SocialIconLink href={x} label="David Swift on X">
         <XIcon />
       </SocialIconLink>
-      <SocialIconLink href={linkedIn} label="David J Swift on LinkedIn">
+      <SocialIconLink href={linkedIn} label="David Swift on LinkedIn">
         <LinkedInIcon />
       </SocialIconLink>
     </div>
