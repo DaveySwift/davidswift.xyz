@@ -14,7 +14,9 @@ MacroAgri. Plant Force Britain.
 
 Education, applied intelligence and human systems that expand what people are capable of learning, building and becoming.
 
-## Enterprise 2.0
+## Enterprise
+
+How the next century builds, funds and scales.
 
 Precision technology, manufacturing and patient capital shaping how the next century builds, funds and scales.
 
