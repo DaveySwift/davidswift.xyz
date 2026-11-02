@@ -4,11 +4,9 @@ David builds and backs ventures that expand opportunity for future generations a
 
 [davidswift.xyz](https://davidswift.xyz)
 
-## Regenerative
+## Infrastructure
 
-Sustainable future crops and low-carbon technologies: carbon credits and green energy engineered to prove their value in the world now.
-
-MacroAgri.
+Infrastructure for the next century: AI ports, spaceports, energy and water, with regeneration built in.
 
 ## Intelligence
 
