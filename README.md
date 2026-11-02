@@ -8,7 +8,7 @@ David builds and backs ventures that expand opportunity for future generations a
 
 Sustainable future crops and low-carbon technologies: carbon credits and green energy engineered to prove their value in the world now.
 
-MacroAgri. Plant Force Britain.
+MacroAgri.
 
 ## Intelligence
 
